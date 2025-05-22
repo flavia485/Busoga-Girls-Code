@@ -74,7 +74,7 @@ nav a:hover {
   margin-bottom: 40px;
   box-shadow: 0 6px 18px rgba(214, 51, 132, 0.5);
 
-  background: url("images/Black-Girls-Code-Image.png") center center/cover no-repeat;
+  background: url("images/hero.jpg") center center/cover no-repeat;
   color: white;
   
 }
@@ -301,6 +301,16 @@ form textarea:focus {
   margin-bottom: 15px;
 }
 
+.contact-info a {
+  color: #d63384;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #a61e65;
+}
+
 .contact-info ul {
   list-style: none;
   padding-left: 0;
@@ -308,15 +318,17 @@ form textarea:focus {
 
 .contact-info ul li {
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Map embed styling */
-.map {
-  margin-top: 20px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+.social-links i {
+  font-size: 1.2rem;
+  color: #d63384;
 }
+
+
 
 /* ========== FOOTER ========== */
 footer {
