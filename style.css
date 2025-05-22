@@ -1,0 +1,386 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f5fb;
+  color: #333;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+/* LINKS */
+a {
+  color: #d63384;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover, a.active {
+  color: #a61e65;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 0; /* smaller top/bottom padding */
+}
+
+.logo img {
+  height: 100px; /* adjust as needed */
+  width: auto;
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0; /* reduce vertical space */
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #d63384;
+  color: white;
+}
+/* ========== HERO SECTION ========== */
+.hero {
+  position: relative;
+  padding: 60px 30px;
+  text-align: left;
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.5);
+
+  background: url("images/Black-Girls-Code-Image.png") center center/cover no-repeat;
+  color: white;
+  
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: 0 0 40px 40px;
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: block; /* or flex if you want */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero .btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: white;
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero .btn:hover {
+  background-color:  #be8fa8;
+  color: #a61e65;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+/* ========== SECTIONS ========== */
+.section {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #a61e65;
+  border-bottom: 3px solid #d63384;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section p, 
+.section ul {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  background-color: #d63384;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #a61e65;
+}
+
+/* ========== FORMS ========== */
+form {
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #a61e65;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1.8px solid #d63384;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #a61e65;
+  outline: none;
+}
+
+/* ========== GALLERY ========== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 30px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  padding: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #555;
+}
+
+/* ========== CONTACT PAGE LAYOUT ========== */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 30px 60px;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(214,51,132,0.15);
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+
+.contact-form h2, .contact-info h2 {
+  color: #a61e65;
+  margin-bottom: 20px;
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+.contact-info p, .contact-info ul {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 8px;
+}
+
+/* Map embed styling */
+.map {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #d63384;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: inset 0 1px 0 #a61e65;
+  user-select: none;
+}
+
+/* Styling for links inside footer */
+footer a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+footer a:hover {
+  color: #ffc0cb; /* Light pink on hover, matches the tone */
+}
+
+/* Icons spacing */
+footer i {
+  margin-right: 5px;
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 10px 15px;
+    display: inline-block;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
