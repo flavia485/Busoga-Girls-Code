@@ -148,6 +148,172 @@ nav a:hover {
 }
 
 
+/* ========== HERO SECTION ========== */
+.hero1 {
+  position: relative;
+  padding: 60px 30px;
+  text-align: left;
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.5);
+
+  background: url("images/class.jpg") center center/cover no-repeat;
+  color: white;
+  
+}
+.hero1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: 0 0 40px 40px;
+  z-index: 0;
+}
+.hero1-content {
+  position: relative;
+  z-index: 1;
+  display: block; /* or flex if you want */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.hero1-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero1-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.hero1-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero1 .btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: white;
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero1 .btn:hover {
+  background-color:  #be8fa8;
+  color: #a61e65;
+}
+
+.hero1-image {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.hero1-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+/* ========== HERO SECTION ========== */
+.hero2 {
+  position: relative;
+  padding: 60px 30px;
+  text-align: left;
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.5);
+
+  background: url("images/gilrls5.jpg") center center/cover no-repeat;
+  color: white;
+  
+}
+.hero2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: 0 0 40px 40px;
+  z-index: 0;
+}
+.hero2-content {
+  position: relative;
+  z-index: 1;
+  display: block; /* or flex if you want */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.hero2-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero2-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.hero2-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero2 .btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: white;
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero2 .btn:hover {
+  background-color:  #be8fa8;
+  color: #a61e65;
+}
+
+.hero2-image {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.hero2-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
 /* ========== SECTIONS ========== */
 .section {
   max-width: 900px;
