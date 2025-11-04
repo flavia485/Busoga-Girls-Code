@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programs - Busoga Girls Code</title>
+  <link rel="stylesheet" href="programs.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo bg.png" alt="Busoga Girls Code Logo">
+    </div>
+    <nav>
+       <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="programs.html">Our Programs</a>
+        <a href="join.html">Join Us</a>
+         <a href="contact.html" class="active">Donate</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Our Programs & Materials</h1>
+    <p>Access tutorials, workshops, and guides to learn coding, robotics, and digital skills. One step at a time, we grow together.</p>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web Design</button>
+    <button class="filter-btn" data-filter="scratch">Scratch</button>
+    <button class="filter-btn" data-filter="robotics">Robotics</button>
+    <button class="filter-btn" data-filter="machine-learning">ML</button>
+  </div>
+
+  <!-- Materials Grid -->
+  <section class="materials-grid">
+    <div class="material-card web">
+      <i class="fas fa-code"></i>
+      <h3>HTML & CSS Basics</h3>
+      <p>Learn to build beautiful web pages from scratch with HTML & CSS.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="material-card scratch">
+      <i class="fas fa-gamepad"></i>
+      <h3>Scratch Game Tutorials</h3>
+      <p>Create fun interactive games using Scratch programming platform.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="material-card robotics">
+      <i class="fas fa-robot"></i>
+      <h3>Beginner Robotics Projects</h3>
+      <p>Hands-on projects to understand basic robotics and electronics.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="material-card ml">
+      <i class="fas fa-brain"></i>
+      <h3>Intro to Machine Learning</h3>
+      <p>Learn the fundamentals of AI and machine learning for beginners.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="material-card web">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Responsive Web Design</h3>
+      <p>Make your websites look perfect on all devices using responsive design.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="material-card scratch">
+      <i class="fas fa-puzzle-piece"></i>
+      <h3>Advanced Scratch Projects</h3>
+      <p>Take your Scratch skills further with interactive story and games.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="material-card robotics">
+      <i class="fas fa-cogs"></i>
+      <h3>Robotics Challenge</h3>
+      <p>Apply your knowledge to build small robots for real-world tasks.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="material-card ml">
+      <i class="fas fa-chart-line"></i>
+      <h3>ML Project Ideas</h3>
+      <p>Practice machine learning through small beginner-friendly projects.</p>
+      <a href="#">Download</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Busoga Girls Code | All rights reserved</p>
+    <p>
+      <a href="mailto:busogagirlscode@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a> |
+      Follow us:
+      <a href="https://www.instagram.com/busogagirlscode" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576781301948" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@busogacoders" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </p>
+  </footer>
+
+  <!-- Script for Mobile Menu & Filter -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('nav');
+    toggle.addEventListener('click', () => navbar.classList.toggle('show'));
+
+    // Filter Materials
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const materialCards = document.querySelectorAll('.material-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        materialCards.forEach(card => {
+          if(filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

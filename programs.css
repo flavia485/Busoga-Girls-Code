@@ -1,0 +1,239 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f5fb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 70px;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #d63384;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #d63384;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  animation: fadeInDown 1.2s ease;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInDown { from { opacity:0; transform: translateY(-30px); } to { opacity:1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 40px 0 20px 0;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid #d63384;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #d63384;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #d63384;
+  color: #fff;
+}
+
+/* =========================
+   MATERIALS GRID
+========================= */
+.materials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 0 20px 50px 20px;
+}
+
+.material-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 240px;
+  box-shadow: 0 6px 18px rgba(214,51,132,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.material-card i {
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 12px;
+}
+
+.material-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.material-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.material-card a {
+  color: #fff;
+  background-color: #d63384;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.material-card a:hover {
+  background-color: #a61e65;
+}
+
+.material-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(214,51,132,0.35);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: #d63384;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 1rem;
+}
+
+footer a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffc0cb;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav.show { display: flex; }
+
+  nav a { width: 100%; text-align: center; padding: 15px; }
+  
+  .filter-buttons { flex-direction: column; align-items: center; }
+  .materials-grid { flex-direction: column; align-items: center; }
+  .material-card { width: 90%; }
+}

@@ -1,0 +1,273 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f5fb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #333;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #d63384;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #d63384;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  animation: fadeInDown 1.2s ease;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+.skills-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUp 0.8s forwards;
+  opacity: 0;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(214, 51, 132, 0.35);
+}
+
+.skill-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #d63384;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+.join-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.join-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #d63384;
+}
+
+.join-section p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #d63384;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #a61e65;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: #d63384;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 80px;
+}
+
+footer a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffc0cb;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 90%;
+  }
+}

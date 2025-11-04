@@ -3,123 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Skills - Busoga Girls Code</title>
-  <link rel="stylesheet" href="style.css" />
-
+  <title>Skills - Busoga Girls Code</title>
+  <link rel="stylesheet" href="skills.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header / Navbar -->
   <header>
-  <div class="logo">
-    <img src="images/logo bg.png" alt="Busoga Girls Code Logo" />
-    
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="join.html">Join Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/logo bg.png" alt="Busoga Girls Code Logo">
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="programs.html">Our Programs</a>
+        <a href="join.html">Join Us</a>
+         <a href="contact.html" class="active">Donate</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Skills Page Title -->
-  <section class="hero1">
-    <h1>Our Tech Skills</h1>
-    <p>We are building the future with code, creativity, and courage. Here's what we can do!</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Our Skills</h1>
+      <p>Empowering girls and women with digital skills to create, innovate, and lead in technology.</p>
+    </div>
   </section>
 
-  <!-- Skills Intro -->
-  <section class="section">
-    <h2>What We've Learned</h2>
-    <p>Busoga Girls Code is not just a group; it’s a team of learners, builders, and leaders. We’ve learned different skills in technology, and we’re proud to share them with others. Below are the core tech areas we've focused on so far.</p>
+  <!-- Skills Section -->
+  <section class="section skills-section">
+    <div class="skills-container">
+      <div class="skill-card" style="animation-delay: 0s;">
+        <img src="images/web-dev.png" alt="Web Development">
+        <h3>Web Development</h3>
+        <p>Learn HTML, CSS, and JavaScript to build responsive and beautiful websites.</p>
+      </div>
+
+      <div class="skill-card" style="animation-delay: 0.2s;">
+        <img src="images/game-dev.png" alt="Game Development">
+        <h3>Game Development</h3>
+        <p>Create fun and interactive games using Scratch and beginner-friendly logic.</p>
+      </div>
+
+      <div class="skill-card" style="animation-delay: 0.4s;">
+        <img src="images/robotics.png" alt="Robotics & Electronics">
+        <h3>Robotics & Electronics</h3>
+        <p>Build circuits and mini-robotics projects to explore STEM hands-on.</p>
+      </div>
+
+      <div class="skill-card" style="animation-delay: 0.6s;">
+        <img src="images/digital-literacy.png" alt="Digital Literacy">
+        <h3>Digital Literacy</h3>
+        <p>Master Microsoft Office, Google Workspace, and essential digital skills.</p>
+      </div>
+
+      <div class="skill-card" style="animation-delay: 0.8s;">
+        <img src="images/programming.png" alt="Programming">
+        <h3>Intro to Programming</h3>
+        <p>Learn Python basics and create small projects while improving logic skills.</p>
+      </div>
+
+      <div class="skill-card" style="animation-delay: 1s;">
+        <img src="images/design.png" alt="Creative Design">
+        <h3>Creative Design</h3>
+        <p>Use Canva and Photoshop to design graphics, posters, and digital projects.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- HTML & CSS -->
-  <section class="section">
-    <h2>💻 Web Development (HTML & CSS)</h2>
-    <p>We started our tech journey by learning how to build websites using HTML and CSS. These are the basic building blocks of the web. We use them to create beautiful, functional, and user-friendly websites. Some things we’ve learned include:</p>
-    <ul>
-      <li>Creating structured web pages with HTML</li>
-      <li>Styling pages using CSS (colors, layouts, fonts)</li>
-      <li>Responsive design for phones and tablets</li>
-      <li>Navigation bars, buttons, and forms</li>
-    </ul>
-    <p>We are using these skills to build this website and also to teach others how to make their own web pages.</p>
-  </section>
-
-  <!-- Scratch -->
-  <section class="section">
-    <h2>🎮 Scratch Programming</h2>
-    <p>Scratch helped us understand the logic behind programming in a fun and visual way. Using drag-and-drop blocks, we learned how to:</p>
-    <ul>
-      <li>Create animations and simple games</li>
-      <li>Use loops, conditions, and variables</li>
-      <li>Build interactive stories and quizzes</li>
-    </ul>
-    <p>We use Scratch when teaching younger girls or beginners, as it builds confidence and creativity.</p>
-  </section>
-
-  <!-- Robotics -->
-  <section class="section">
-    <h2>🤖 Robotics</h2>
-    <p>We explored basic robotics using kits like Arduino and LEGO Mindstorms. With these tools, we learned how to:</p>
-    <ul>
-      <li>Build simple robots using sensors and motors</li>
-      <li>Write basic code to control robots</li>
-      <li>Make robots respond to touch, light, and movement</li>
-    </ul>
-    <p>Robotics taught us about teamwork, innovation, and how software and hardware work together.</p>
-  </section>
-
-  <!-- Machine Learning -->
-  <section class="section">
-    <h2>🧠 Introduction to Machine Learning</h2>
-    <p>We were introduced to basic ideas in artificial intelligence and machine learning. Though still beginners, we learned about:</p>
-    <ul>
-      <li>What AI and machine learning are</li>
-      <li>How data can be used to teach computers</li>
-      <li>Using beginner-friendly tools to train simple models</li>
-    </ul>
-    <p>Our goal is to go deeper into this field and help others understand how AI is changing the world.</p>
-  </section>
-
-  <!-- How We Use Our Skills -->
-  <section class="section">
-    <h2>📢 How We Use Our Skills</h2>
-    <p>We don’t just learn — we use our skills to teach, build, and make a difference. Here’s how:</p>
-    <ul>
-      <li>We create real websites for projects and awareness campaigns</li>
-      <li>We organize tech workshops and coding camps for girls</li>
-      <li>We build tech-based solutions to solve problems in our community</li>
-      <li>We mentor others who are just starting in tech</li>
-    </ul>
-    <p>Our dream is to help every girl see that she belongs in technology.</p>
+  <!-- Call-to-Action -->
+  <section class="section join-section">
+    <h2>Ready to Explore Your Potential?</h2>
+    <p>Join our workshops and acquire skills that empower you to innovate and lead in tech.</p>
+    <a href="join.html" class="btn">Join Us Today</a>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Busoga Girls Code | All rights reserved</p>
     <p>
-      <a href="mailto:busogagirlscode@gmail.com" target="_blank">
-        <i class="fas fa-envelope"></i>
-      </a>
+      <a href="mailto:busogagirlscode@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
       |
       Follow us:
-      <a href="https://www.instagram.com/busogagirlscode" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61576781301948" target="_blank">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.tiktok.com/@busogacoders" target="_blank">
-        <i class="fab fa-tiktok"></i>
-      </a>
+      <a href="https://www.instagram.com/busogagirlscode" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576781301948" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@busogacoders" target="_blank"><i class="fab fa-tiktok"></i></a>
     </p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+  </script>
+
 </body>
 </html>

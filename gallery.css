@@ -1,0 +1,215 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f5fb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+header .logo img {
+  height: 70px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #d63384;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #d63384;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero2 {
+  height: 80vh;
+  width: 100%;
+  background-image: url('images/hero.jpg'); /* your hero image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero2 h1,
+.hero2 p {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+
+.hero2 h1 {
+  font-size: 3rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero2 p {
+  font-size: 1.3rem;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Hero animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   GALLERY GRID
+========================= */
+.gallery-grid {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 6px 15px rgba(214, 51, 132, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(214, 51, 132, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px; /* smaller than full size */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Staggered animation for gallery items */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.3s; }
+.gallery-item:nth-child(3) { animation-delay: 0.5s; }
+.gallery-item:nth-child(4) { animation-delay: 0.7s; }
+.gallery-item:nth-child(5) { animation-delay: 0.9s; }
+.gallery-item:nth-child(6) { animation-delay: 1.1s; }
+.gallery-item:nth-child(7) { animation-delay: 1.3s; }
+.gallery-item:nth-child(8) { animation-delay: 1.5s; }
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: #d63384;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 80px;
+}
+
+footer a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+footer a:hover { color: #ffc0cb; }
+footer i { margin-right: 5px; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero2 h1 { font-size: 2.2rem; }
+  .hero2 p { font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  nav.show { display: flex; }
+  nav a { padding: 15px; text-align: center; width: 100%; }
+
+  .gallery-grid { flex-direction: column; align-items: center; gap: 20px; }
+  .gallery-item { width: 90%; }
+}

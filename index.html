@@ -4,44 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Busoga Girls Code</title>
-  <link rel="stylesheet" href="style.css" />
 
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
+  <!-- CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ===== HEADER / NAVBAR ===== -->
   <header>
-  <div class="logo">
-    <img src="images/logo bg.png" alt="Busoga Girls Code Logo" />
-   
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="join.html">Join Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-
-  <!-- Hero Section -->
-  <section class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Welcome to Busoga Girls Code</h1>
-      <p>We are a group of passionate, tech-driven girls from the Busoga region on a mission to bridge the technology gap by empowering our peers through digital skills.</p>
-      <a href="join.html" class="btn">Join the Movement</a>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/logo bg.png" alt="Busoga Girls Code Logo" />
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="programs.html">Our Programs</a>
+        <a href="join.html">Join Us</a>
+         <a href="contact.html" class="active">Donate</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
     </div>
-    
-  </div>
-</section>
+  </header>
 
-  <!-- Mission & Vision -->
+  <!-- ===== HERO SLIDESHOW ===== -->
+  <section class="hero-slider">
+    <div class="slide fade" style="background-image: url('images/hero.jpg');">
+      <div class="hero-text">
+        <h1>Welcome to Busoga Girls Code</h1>
+        <p>Empowering girls in the Busoga region with digital skills to shape the future of technology.</p>
+        <a href="join.html" class="btn">Join the Movement</a>
+      </div>
+    </div>
+    <div class="slide fade" style="background-image: url('images/class.jpg');">
+      <div class="hero-text">
+        <h1>Learn. Create. Lead.</h1>
+        <p>We teach coding, robotics, and digital literacy to inspire innovation among girls and women.</p>
+        <a href="about.html" class="btn">Learn More</a>
+      </div>
+    </div>
+    <div class="slide fade" style="background-image: url('images/gilrls5.jpg');">
+      <div class="hero-text">
+        <h1>Bridge the Gap in Tech</h1>
+        <p>Together, we can create a future where women are equally represented in technology.</p>
+        <a href="contact.html" class="btn">Get Involved</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION & VISION ===== -->
   <section class="section mission">
     <h2>Our Mission</h2>
     <p>To empower young girls with technology skills and inspire them to become creators, problem solvers, and leaders in the digital world.</p>
@@ -50,61 +69,120 @@
     <p>We envision a future where every girl in our community has access to technology education, resources, and opportunities to thrive in the tech space.</p>
   </section>
 
-  <!-- Why Girls & Tech Matter -->
+  <!-- ===== WHY GIRLS IN TECH ===== -->
   <section class="section importance">
     <h2>Why Girls in Tech?</h2>
-    <p>In many communities, girls are left behind in technology. At Busoga Girls Code, we believe that bridging this gap is not only fair — it's necessary. Technology drives the future, and we want to ensure girls are part of that future.</p>
-    <p>We aim to:
-      <ul>
-        <li>Encourage more girls to pursue careers in technology</li>
-        <li>Offer hands-on coding workshops</li>
-        <li>Mentor girls through tech projects</li>
-        <li>Raise awareness about digital literacy</li>
-      </ul>
-    </p>
+    <div class="importance-grid">
+      <div class="importance-item">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Encourage Careers</h3>
+        <p>Inspire more girls to pursue careers in technology and STEM fields.</p>
+      </div>
+      <div class="importance-item">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Hands-on Workshops</h3>
+        <p>Offer engaging coding sessions that teach real-world skills.</p>
+      </div>
+      <div class="importance-item">
+        <i class="fas fa-user-friends"></i>
+        <h3>Mentorship</h3>
+        <p>Connect girls with experienced women in tech to guide them.</p>
+      </div>
+      <div class="importance-item">
+        <i class="fas fa-book"></i>
+        <h3>Raise Awareness</h3>
+        <p>Educate communities about the importance of digital literacy.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- What We Do -->
+  <!-- ===== WHAT WE DO ===== -->
   <section class="section what-we-do">
     <h2>What We Do</h2>
-    <p>Our team has acquired strong skills in web design using HTML and CSS, game development with Scratch, beginner robotics, and machine learning. We use these skills to teach others, host community sessions, and build projects that raise awareness about technology.</p>
-    <p>Through our website and offline training, we offer:
-      <ul>
-        <li>Free tutorials for beginners</li>
-        <li>In-person coding sessions</li>
-        <li>Inspirational talks from girl coders</li>
-        <li>Real projects built by girls</li>
-      </ul>
-    </p>
+    <div class="what-grid">
+      <div class="what-item">
+        <i class="fas fa-code"></i>
+        <h3>Free Tutorials</h3>
+        <p>Learn coding from scratch through online and in-person tutorials.</p>
+      </div>
+      <div class="what-item">
+        <i class="fas fa-robot"></i>
+        <h3>Robotics Projects</h3>
+        <p>Hands-on projects that spark creativity and problem-solving skills.</p>
+      </div>
+      <div class="what-item">
+        <i class="fas fa-users"></i>
+        <h3>Community Sessions</h3>
+        <p>Collaborate and learn together, sharing knowledge with peers.</p>
+      </div>
+      <div class="what-item">
+        <i class="fas fa-project-diagram"></i>
+        <h3>Tech Projects</h3>
+        <p>Build real-world projects that impact the community and showcase skills.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Call to Action -->
+  <!-- ===== JOIN US ===== -->
   <section class="section join-section">
     <h2>Be Part of the Change</h2>
     <p>If you’re a girl who’s curious, creative, or just wants to explore the tech world – we welcome you! Together we can build something amazing.</p>
+
+    <div class="join-containers">
+      <div class="join-container">
+        <img src="images/class.jpg" alt="Coding Workshops">
+        <h3>Coding Workshops</h3>
+        <p>Hands-on coding sessions teaching HTML, CSS, Scratch, and beginner Python in a fun, interactive way.</p>
+      </div>
+
+      <div class="join-container">
+        <img src="images/presentation.jpg" alt="Mentorship Programs">
+        <h3>Mentorship Programs</h3>
+        <p>Connect with experienced women in tech who guide and inspire girls to pursue careers in digital fields.</p>
+      </div>
+
+      <div class="join-container">
+        <img src="images/purity.jpg" alt="Community Projects">
+        <h3>Community Projects</h3>
+        <p>Collaborate on real projects, from websites to small robotics challenges, making technology accessible to everyone.</p>
+      </div>
+    </div>
+
     <a href="join.html" class="btn">Join Us Today</a>
   </section>
 
-  <!-- Footer -->
-<footer>
+  <!-- ===== FOOTER ===== -->
+  <footer>
     <p>© 2025 Busoga Girls Code | All rights reserved</p>
     <p>
-      <a href="mailto:busogagirlscode@gmail.com" target="_blank">
-        <i class="fas fa-envelope"></i> 
-      </a>
-      |
+      <a href="mailto:busogagirlscode@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a> |
       Follow us:
-      <a href="https://www.instagram.com/busogagirlscode" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61576781301948" target="_blank">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.tiktok.com/@busogacoders" target="_blank">
-        <i class="fab fa-tiktok"></i>
-      </a>
+      <a href="https://www.instagram.com/busogagirlscode" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576781301948" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@busogacoders" target="_blank"><i class="fab fa-tiktok"></i></a>
     </p>
   </footer>
 
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+
+    // Hero slideshow
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlides() {
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "flex";
+      setTimeout(showSlides, 4000);
+    }
+    showSlides();
+  </script>
 </body>
 </html>

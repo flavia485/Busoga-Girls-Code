@@ -4,68 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Busoga Girls Code</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
 
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
-  <!-- Header -->
- <header>
-  <div class="logo">
-    <img src="images/logo bg.png" alt="Busoga Girls Code Logo" />
-   
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="join.html">Join Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/logo bg.png" alt="Busoga Girls Code Logo" />
+      </div>
 
-  <!-- About Us Intro -->
-  <section class="hero">
-    <h1>About Us</h1>
-    <p>We are young girls using technology to create change in our community.</p>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="programs.html">Our Programs</a>
+        <a href="join.html">Join Us</a>
+         <a href="contact.html" class="active">Donate</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SLIDESHOW ===================== -->
+  <section class="hero-slider">
+    <div class="slide fade" style="background-image: url('images/class.jpg');">
+      <div class="hero-text">
+        <h1>About Busoga Girls Code</h1>
+        <p>We are young girls using technology to create change in our community.</p>
+      </div>
+    </div>
+    <div class="slide fade" style="background-image: url('images/gilrls5.jpg');">
+      <div class="hero-text">
+        <h1>Learn, Create, Inspire</h1>
+        <p>Empowering girls to innovate, code, and lead in the digital world.</p>
+      </div>
+    </div>
+    <div class="slide fade" style="background-image: url('images/hero.jpg');">
+      <div class="hero-text">
+        <h1>Bridge the Tech Gap</h1>
+        <p>Together, we ensure girls are equally represented in technology.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Our Story -->
+  <!-- ===================== OUR STORY ===================== -->
   <section class="section">
     <h2>Our Story</h2>
     <p>Busoga Girls Code started with a simple idea: to give girls the chance to learn and grow through technology. In a world where technology is changing everything, we saw that many girls in our region were left behind. So we came together to learn, grow, and teach.</p>
     <p>We began by learning HTML and CSS for building websites. Then we moved on to fun tools like Scratch for games, robotics for creativity, and even beginner machine learning. We are proud to say that we now teach others what we have learned.</p>
   </section>
 
-  <!-- Our Goals -->
+  <!-- ===================== OUR GOALS ===================== -->
   <section class="section">
     <h2>Our Goals</h2>
     <ul>
-      <li>🌟 To inspire and train more girls in digital skills</li>
-      <li>👩‍💻 To use our knowledge to help others</li>
-      <li>🌐 To create a digital space for girls to learn and grow</li>
-      <li>📢 To raise awareness about the importance of girls in tech</li>
+      <li>🌟 Inspire and train more girls in digital skills</li>
+      <li>👩‍💻 Use our knowledge to help others</li>
+      <li>🌐 Create a digital space for girls to learn and grow</li>
+      <li>📢 Raise awareness about the importance of girls in tech</li>
     </ul>
   </section>
 
-  <!-- Our Team -->
+  <!-- ===================== OUR TEAM ===================== -->
   <section class="section">
     <h2>Meet Our Team</h2>
-    <p>We are a team of bright and motivated girls from different backgrounds, united by a love for learning and technology. Each of us brings something special to the group—from design skills to public speaking, from coding to mentoring others.</p>
-    <p>Our team believes in lifting each other up and sharing what we know. We are future developers, engineers, creators—and we’re just getting started.</p>
+    <p>We are a team of bright and motivated girls from different backgrounds, united by a love for learning and technology.</p>
+
+    <div class="team-container">
+      <div class="team-member">
+        <img src="images/team1.jpg" alt="Alice Namayanja">
+        <h3>Alice Namayanja</h3>
+        <p>Lead Developer & Mentor</p>
+      </div>
+      <div class="team-member">
+        <img src="images/team2.jpg" alt="Beatrice Nakato">
+        <h3>Beatrice Nakato</h3>
+        <p>Web Designer & Workshop Lead</p>
+      </div>
+      <div class="team-member">
+        <img src="images/team3.jpg" alt="Chantal Akello">
+        <h3>Chantal Akello</h3>
+        <p>Robotics & Coding Instructor</p>
+      </div>
+      <div class="team-member">
+        <img src="images/team4.jpg" alt="Dorothy Sanyu">
+        <h3>Dorothy Sanyu</h3>
+        <p>Community Outreach & Project Coordinator</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Why We Started -->
+  <!-- ===================== WHY WE STARTED ===================== -->
   <section class="section">
     <h2>Why We Started This Project</h2>
     <p>In many communities, girls are not encouraged to join the tech world. We started Busoga Girls Code to change that mindset. We wanted to show that girls are just as capable in coding, robotics, and digital problem solving.</p>
     <p>By creating this website, we want to prove that with opportunity, training, and support, girls can do anything—including leading the future of technology.</p>
   </section>
 
-  <!-- Impact -->
+  <!-- ===================== OUR IMPACT ===================== -->
   <section class="section">
     <h2>Our Impact So Far</h2>
     <ul>
@@ -75,10 +121,10 @@
       <li>👩🏾‍🏫 Taught coding sessions in our community</li>
       <li>🌍 Inspired more girls to believe in their abilities</li>
     </ul>
-    <p>This is only the beginning. We are growing, learning, and reaching more girls every day.</p>
+    
   </section>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer>
     <p>© 2025 Busoga Girls Code | All rights reserved</p>
     <p>
@@ -98,5 +144,27 @@
       </a>
     </p>
   </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+
+    // Hero slideshow
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlides() {
+      slides.forEach(slide => slide.style.display = 'none');
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = 'flex';
+      setTimeout(showSlides, 4000);
+    }
+    showSlides();
+  </script>
 </body>
 </html>

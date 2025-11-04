@@ -1,0 +1,110 @@
+/* =========================
+   RESET & BASE
+========================= */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height:1.6;
+  background:#f9f5fb;
+  color:#333;
+  scroll-behavior:smooth;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+  background:#fff;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.nav-container {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 40px;
+}
+.logo img { height:70px; width:auto; }
+nav { display:flex; gap:18px; }
+nav a {
+  font-weight:600;
+  font-size:1rem;
+  padding:8px 14px;
+  border-radius:6px;
+  color:#333;
+  text-decoration:none;
+  transition:background-color 0.3s ease;
+}
+nav a:hover, nav a.active { background:#d63384; color:#fff; }
+.menu-toggle { display:none; background:none; border:none; font-size:1.8rem; color:#d63384; cursor:pointer; }
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  height:70vh;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  color:white;
+}
+.hero::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+}
+.hero-text { position:relative; z-index:1; max-width:800px; padding:20px; border-radius:15px; }
+.hero h1 { font-size:3rem; margin-bottom:15px; animation:fadeInDown 1s ease forwards; }
+.hero p { font-size:1.3rem; margin-bottom:20px; animation:fadeInUp 1.2s ease forwards; }
+
+
+@keyframes fadeInDown { from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);} }
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section { max-width:1000px; margin:60px auto; padding:0 20px; }
+.contact-container { display:flex; flex-wrap:wrap; gap:40px; background:#fff; padding:30px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.1); }
+.contact-form, .contact-info { flex:1 1 400px; }
+.contact-form h2, .contact-info h2 { font-size:2rem; color:#a61e65; border-bottom:3px solid #d63384; display:inline-block; margin-bottom:15px; }
+.contact-form label { margin:10px 0 5px; font-weight:600; }
+.contact-form input, .contact-form textarea { width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; margin-bottom:15px; font-size:1rem; }
+.contact-form button.btn { background:#d63384; color:white; padding:12px 28px; border-radius:30px; font-weight:600; transition:0.3s; cursor:pointer; }
+.contact-form button.btn:hover { background:#a61e65; transform:scale(1.05); }
+.contact-info p, .contact-info a { font-size:1rem; color:#333; margin-bottom:10px; display:block; }
+.contact-info ul.social-links { list-style:none; padding:0; }
+.contact-info ul.social-links li { margin-bottom:10px; }
+.contact-info ul.social-links li a { text-decoration:none; color:#333; transition:0.3s; }
+.contact-info ul.social-links li a:hover { color:#d63384; }
+
+/* Map */
+.map { margin-top:20px; border-radius:12px; overflow:hidden; }
+
+/* =========================
+   FOOTER
+========================= */
+footer { background:#d63384; color:white; text-align:center; padding:25px 20px; font-size:1rem; letter-spacing:1px; margin-top:40px; }
+footer a { color:white; margin:0 8px; text-decoration:none; }
+footer a:hover { color:#ffc0cb; }
+footer i { margin-right:5px; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px) {
+  .menu-toggle { display:block; }
+  nav { display:none; flex-direction:column; background:#fff; width:100%; position:absolute; top:80px; left:0; }
+  nav.show { display:flex; }
+  nav a { width:100%; text-align:center; padding:15px; }
+  .contact-container { flex-direction:column; }
+  .contact-form, .contact-info { flex:1 1 100%; }
+}
