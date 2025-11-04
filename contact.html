@@ -3,33 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Busoga Girls Code</title>
+  <title>Contact - Busoga Girls Code Project</title>
   <link rel="stylesheet" href="contact.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <!-- Header / Navbar -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">
-        <img src="images/logo bg.png" alt="Busoga Girls Code Logo" />
-      </div>
+ <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/logo bg.png" alt="Busoga Girls Code Logo" />
+    </div>
+
+    <!-- Menu button -->
+    <div class="menu-wrapper">
       <button class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars"></i> Menu
       </button>
-      <nav id="navbar">
-       <a href="index.html">Home</a>
+      <nav id="navbar" class="dropdown-menu">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="skills.html">Skills</a>
         <a href="gallery.html">Gallery</a>
-        <a href="programs.html">Our Programs</a>
-        <a href="join.html">Join Us</a>
-         <a href="contact.html" class="active">Donate</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="programs.html">Programs</a>
+        <a href="join.html">Join </a>
+        <a href="contact.html">Donate</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <section class="hero" style="background-image: url('images/hero.jpg');">
@@ -95,7 +100,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Busoga Girls Code | All rights reserved</p>
+    <p>© 2025 Busoga Girls Code Project | All rights reserved</p>
     <p>
       <a href="mailto:busogagirlscode@gmail.com"><i class="fas fa-envelope"></i> busogagirlscode@gmail.com</a> |
       Follow us:
